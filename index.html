@@ -19,13 +19,21 @@
     <a-scene embedded arjs>
      <!-- AR.JS with A-Frame documentation: https://aframe.io/blog/arjs/
           Step by step AR with A-Frame: https://github.com/jeromeetienne/AR.js/blob/master/docs/posts/post-XX-how-to-use-arjs-with-aframe.md-->
-    
-      
+     
+      <a-nft
+      type="nft"
+      url="./asset/AR"
+      smooth="true"
+      smoothCount="10"
+      smoothTolerance=".01"
+      smoothThreshold="5"
+    >
+     
       <!--  ---------ASSETS --------- --> 
     <a-assets>
-      <img id="call" crossorigin="anonymous" src="https://raw.githubusercontent.com/Shaleshshekhar/ARjs-assets/master/call.jpg">
-      <img id="website" crossorigin="anonymous" src="https://raw.githubusercontent.com/Shaleshshekhar/ARjs-assets/master/website.jpg">
-      <img id="map" crossorigin="anonymous" src="https://raw.githubusercontent.com/Shaleshshekhar/ARjs-assets/master/map.jpg">
+      <img id="call" crossorigin="anonymous" src="./asset/call.png">
+      <img id="website" crossorigin="anonymous" src="https://raw.githubusercontent.com/Shaleshshekhar/shaleshshekhar.github.io/master/asset/website.png">
+      <img id="map" crossorigin="anonymous" src="./asset/map.png">
     </a-assets>
     
       
@@ -34,9 +42,7 @@
       
     <!-- define a camera which will move according to the marker position -->
     
-    <a-marker preset="hiro">
-    <!-- This is a preset marker you can find here https://jeromeetienne.github.io/AR.js/data/images/HIRO.jpg. Just show it to the camera and the image will appear -->
-      
+    
     <!-- <a-marker type="pattern" size="2" url="https://cdn.glitch.com/2a1d3f33-8c4f-4985-ab16-4fdd9ff91c67%2Fpattern-marker.patt?1500649950652">
           This is a custom marker created here: https://jeromeetienne.github.io/AR.js/three.js/examples/marker-training/examples/generator.html -->
       
@@ -46,7 +52,8 @@
      
       <a-plane  src="#map"  width="0.5" height="0.5"  position="0.6 0 0" rotation="-90 0 0 ">  </a-plane>
      
-    </a-marker>
+      
+    </a-nft>
     
       <!--  here you tell A-Frame that you want ar.js to control the camera
             <a-marker-camera> will make it so that the camera is moving and the marker is static
