@@ -20,15 +20,7 @@
      <!-- AR.JS with A-Frame documentation: https://aframe.io/blog/arjs/
           Step by step AR with A-Frame: https://github.com/jeromeetienne/AR.js/blob/master/docs/posts/post-XX-how-to-use-arjs-with-aframe.md-->
      
-      <a-nft
-      type="nft"
-      url="/asset/ar"
-      smooth="true"
-      smoothCount="10"
-      smoothTolerance=".01"
-      smoothThreshold="5"
-    >
-     
+      <a-marker preset="hiro">
       <!--  ---------ASSETS --------- --> 
     <a-assets>
       <img id="call" crossorigin="anonymous" src="/asset/call.png">
@@ -48,12 +40,12 @@
       
       <a-plane  src="#call"  width="0.5" height="0.5" transparent=true position="-.6 0 0" rotation="-90 0 0 ">  </a-plane>
      
-      <a-plane  src="#website"  width="0.5" height="0.5"  position="0 0 0" rotation="-90 0 0 ">  </a-plane>
+      <a-plane  src="#website"  width="0.5" height="0.5" transparent=true  position="0 0 0" rotation="-90 0 0 ">  </a-plane>
      
-      <a-plane  src="#map"  width="0.5" height="0.5"  position="0.6 0 0" rotation="-90 0 0 ">  </a-plane>
+      <a-plane  src="#map"  width="0.5" height="0.5" transparent=true  position="0.6 0 0" rotation="-90 0 0 ">  </a-plane>
      
       
-    </a-nft>
+    </a-marker>
     
       <!--  here you tell A-Frame that you want ar.js to control the camera
             <a-marker-camera> will make it so that the camera is moving and the marker is static
